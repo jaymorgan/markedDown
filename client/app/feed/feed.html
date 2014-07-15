@@ -2,12 +2,12 @@
 <div class="container">
 <div class="col-md-12">
 
-	<div class="row panel panel-default" ng-repeat="message in messages">
-		<div class="panel-header">
-			<h4>{{ message.author }}</h4>
+	<div class="row well" ng-repeat="message in messages">
+		<div class="">
+			<h4><a ng-href="mailto:{{ message.author.email }}">{{ message.author.name }}</a></h4>
 			<span class="">{{ message.postDate | date }}</span>
 		</div>
-		<div class="panel-body">
+		<div class="">
 			{{ message.text }}
 		</div>
 	</div>
