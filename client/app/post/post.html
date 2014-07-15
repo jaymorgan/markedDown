@@ -1,9 +1,40 @@
 <div ng-include="'components/navbar/navbar.html'"></div>
 
-<div class="col-md-12">
+<div class="col-md-6">
 
-	<form role="form" class="form-horizontal">
+	<form role="form" ng-submit="save(post)">
+		<div class="form-group">
+			<label for="title" class="sr-only control-label">Post Title</label>
+			<input type="text" ng-model="post.title" class="form-control" id="title" placeholder="Post Title">
+		</div>
+		<div class="form-group">
+			<label for="category" class="sr-only control-label">Category</label>
+			<input type="text" ng-model="post.category" class="form-control" id="category" placeholder="Category">
+		</div>
+		<div class="form-group">
+			<label for="tags" class="sr-only control-label">Tags</label>
+			<input type="text" ng-model="post.tags" class="form-control" id="tags" placeholder="Tags">
+		</div>
 
+		<div class="form-group">
+			<label for="body" class="sr-only control-label">Body</label>
+			<textarea type="text" ng-model="post.text" class="form-control" id="body" placeholder="Post Body" rows="20"></textarea>
+		</div>
+
+		<div class="form-group">
+			<button type="submit" class="btn btn-primary">Save</button>
+		</div>
 	</form>
 
 </div>
+
+<div class="col-md-6">
+	<div class="panel">
+<btf-markdown>
+
+{{ post.text }}
+
+</btf-markdown>
+	</div>
+</div>
+

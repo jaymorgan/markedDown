@@ -6,6 +6,7 @@ angular.module('markedDownApp')
       .state('post', {
         url: '/post',
         templateUrl: 'app/post/post.html',
-        controller: 'PostCtrl'
+        controller: 'PostCtrl',
+        authenticate: true
       });
   });

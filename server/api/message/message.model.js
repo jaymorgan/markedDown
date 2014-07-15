@@ -5,6 +5,7 @@ var mongoose = require('mongoose'),
 
 var MessageSchema = new Schema({
   author: String,
+  title: String,
   text: String,
   postDate: Number,
   modifiedDate: Number,

@@ -1,9 +1,16 @@
 <div ng-include="'components/navbar/navbar.html'"></div>
-
+<div class="container">
 <div class="col-md-12">
 
-	<div class="row" ng-repeat="message in messages">
-		{{ message.text }}
+	<div class="row panel panel-default" ng-repeat="message in messages">
+		<div class="panel-header">
+			<h4>{{ message.author }}</h4>
+			<span class="">{{ message.postDate | date }}</span>
+		</div>
+		<div class="panel-body">
+			{{ message.text }}
+		</div>
 	</div>
 
+</div>
 </div>

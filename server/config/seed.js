@@ -7,6 +7,7 @@
 
 var Thing = require('../api/thing/thing.model');
 var User = require('../api/user/user.model');
+var Message = require('../api/message/message.model');
 
 Thing.find({}).remove(function() {
   Thing.create({
@@ -30,20 +31,37 @@ Thing.find({}).remove(function() {
   });
 });
 
-User.find({}).remove(function() {
-  User.create({
-    provider: 'local',
-    name: 'Test User',
-    email: 'test@test.com',
-    password: 'test'
-  }, {
-    provider: 'local',
-    role: 'admin',
-    name: 'Admin',
-    email: 'admin@admin.com',
-    password: 'admin'
-  }, function() {
-      console.log('finished populating users');
-    }
-  );
-});
+//User.find({}).remove(function() {
+//  User.create({
+//    provider: 'local',
+//    name: 'Test User',
+//    email: 'test@test.com',
+//    password: 'test'
+//  }, {
+//    provider: 'local',
+//    role: 'admin',
+//    name: 'Admin',
+//    email: 'admin@admin.com',
+//    password: 'admin'
+//  }, {
+//    provider: 'local',
+//    role: 'admin',
+//    name: 'Jay',
+//    email: 'jay@jaymorgan.me',
+//    password: '123'
+//  }, function() {
+//      console.log('finished populating users');
+//    }
+//  );
+//});
+
+//Message.create({
+//  author: '53c1839f903e106be4478560',
+//  text: '#Ipsum and shit',
+//  postDate: 1405191169958,
+//  modifiedDate: 1405191169958,
+//  version: 1,
+//  tags: [{'tag': 'Lorem'}],
+//  category: 'Ipsumly',
+//  active: true
+//});

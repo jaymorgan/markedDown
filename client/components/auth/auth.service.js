@@ -1,5 +1,9 @@
 'use strict';
 
+// To get the info of the current User
+// var uid = Auth.getCurrentUser()._id;
+// var userName = Auth.getCurrentUser().name;
+
 angular.module('markedDownApp')
   .factory('Auth', function Auth($location, $rootScope, $http, User, $cookieStore, $q) {
     var currentUser = {};

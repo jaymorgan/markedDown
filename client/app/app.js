@@ -7,7 +7,8 @@ angular.module('markedDownApp', [
   'ui.bootstrap',
   'btford.socket-io',
   'btford.markdown',
-  'ui.router'
+  'ui.router',
+  'ui.drop'
 ])
   .config(function ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
     $urlRouterProvider

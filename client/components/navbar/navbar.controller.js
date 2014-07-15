@@ -5,15 +5,18 @@ angular.module('markedDownApp')
     $scope.menu = [
       {
         'title': 'Home',
-        'link': '/'
+        'link': '/',
+        'loggedIn': false
       },
       {
         'title': 'Feed',
-        'link': '/feed'
+        'link': '/feed',
+        'loggedIn': false
       },
       {
         'title': 'New Post',
-        'link': '/post'
+        'link': '/post',
+        'loggedIn': true
       }
     ];
 
@@ -30,4 +33,13 @@ angular.module('markedDownApp')
     $scope.isActive = function (route) {
       return route === $location.path();
     };
+
+    $scope.needAuth = function(authNeeded) {
+      if(authNeeded){
+        return $scope.isLoggedIn();
+      } else {
+        return true;
+      }
+    };
+
   });
