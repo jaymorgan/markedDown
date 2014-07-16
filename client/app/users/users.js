@@ -6,6 +6,7 @@ angular.module('markedDownApp')
       .state('users', {
         url: '/users',
         templateUrl: 'app/users/users.html',
-        controller: 'UsersCtrl'
+        controller: 'UsersCtrl',
+        authenticate: true
       });
   });

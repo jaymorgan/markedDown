@@ -2,10 +2,12 @@
 
 var _ = require('lodash');
 var Message = require('./message.model');
+var User = require('../user/user.model');
 
 // Get list of msgs
 exports.index = function(req, res) {
-  Message.find(function (err, messages) {
+  Message.find().populate('author', 'name email')
+    .exec(function (err, messages) {
     if(err) { return handleError(res, err); }
     return res.json(200, messages);
   });

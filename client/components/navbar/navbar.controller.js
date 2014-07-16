@@ -14,6 +14,11 @@ angular.module('markedDownApp')
         'loggedIn': false
       },
       {
+        'title': 'Users',
+        'link': '/users',
+        'loggedIn': true
+      },
+      {
         'title': 'New Post',
         'link': '/post',
         'loggedIn': true

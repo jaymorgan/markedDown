@@ -1,10 +1,11 @@
 'use strict';
 
 var mongoose = require('mongoose'),
-    Schema = mongoose.Schema;
+    Schema = mongoose.Schema,
+    User = require('../user/user.model');
 
 var MessageSchema = new Schema({
-  author: String,
+  author: { type: String, ref: 'User' },
   title: String,
   text: String,
   postDate: Number,
