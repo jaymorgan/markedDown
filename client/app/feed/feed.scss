@@ -1,0 +1,32 @@
+.feed {
+
+}
+
+.message {
+	background: $gray-lighter;
+	margin-bottom: $spacer;
+}
+
+.message-header {
+	padding: $spacer*0.5 $spacer*0.5 $spacer/2 $spacer*0.5;
+	background: #8c98ae;
+	box-shadow: inset 0px -20px 10px -20px rgba(0,0,0,0.2);
+	h4 {
+		margin-left: $spacer;
+	}
+}
+
+.message-date {
+	color: $grey;
+	font-size: 0.8em;
+	height: 100%;
+	margin-top: 1em;
+	.message-date-label {
+		font-size: 0.7em;
+	}
+}
+
+.message-body{
+	display: block;
+	padding: $spacer/2 $spacer*0.5 $spacer*0.5 $spacer*0.5;
+}

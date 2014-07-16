@@ -1,6 +1,8 @@
 $icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/";
 $fa-font-path: "/bower_components/font-awesome/fonts";
 
+@import '_bootstrap-variables-overwrite.scss';
+
 @import 'bootstrap-sass-official/vendor/assets/stylesheets/bootstrap';
 @import 'font-awesome/scss/font-awesome';
 
@@ -24,10 +26,12 @@ $fa-font-path: "/bower_components/font-awesome/fonts";
 
 // Component styles are injected through grunt
 // injector
+@import '_bootstrap-variables-overwrite.scss';
 @import 'account/login/login.scss';
 @import 'admin/admin.scss';
 @import 'feed/feed.scss';
 @import 'main/main.scss';
 @import 'post/post.scss';
 @import 'users/users.scss';
+@import 'avatarDot/avatarDot.scss';
 // endinjector

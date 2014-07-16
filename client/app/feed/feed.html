@@ -1,13 +1,18 @@
 <div ng-include="'components/navbar/navbar.html'"></div>
 <div class="container">
-<div class="col-md-12">
+<div class="col-md-12 feed">
 
-	<div class="row well" ng-repeat="message in messages">
-		<div class="">
-			<h4><a ng-href="mailto:{{ message.author.email }}">{{ message.author.name }}</a></h4>
-			<span class="">{{ message.postDate | date }}</span>
+	<div class="row message" ng-repeat="message in msgs">
+		<div class="message-header clearfix">
+			<avatar-dot author="message.author.name"></avatar-dot>
+			<h4 class="pull-left">
+				<a ng-href="mailto:{{ message.author.email }}">{{ message.author.name }}</a>
+			</h4>
+			<div class="message-date pull-right">
+				<span class="message-date-label">posted: </span>{{ message.postDate | date }}
+			</div>
 		</div>
-		<div class="">
+		<div class="message-body">
 			{{ message.text }}
 		</div>
 	</div>
