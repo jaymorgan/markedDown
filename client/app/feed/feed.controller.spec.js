@@ -5,7 +5,7 @@ describe('Controller: FeedCtrl', function () {
   // load the controller's module
   beforeEach(module('markedDownApp'));
 
-  var FeedCtrl, scope;
+  var FeedCtrl, scope, socket, Messages;
 
   // Initialize the controller and a mock scope
   beforeEach(inject(function ($controller, $rootScope) {

@@ -1,17 +1,17 @@
 'use strict';
 
 angular.module('markedDownApp')
-  .controller('FeedCtrl', function ($scope, socket, Messages) {
+  .controller('FeedCtrl', ['$scope', 'socket', 'Messages', function ($scope, socket, Messages) {
 
-    $scope.messages = [];
+    $scope.msgs = [];
 
     Messages.query().$promise.then(function (result) {
-      $scope.messages = result;
-      socket.syncUpdates('message', $scope.messages);
+      $scope.msgs = result;
+      socket.syncUpdates('message', $scope.msgs);
     });
 
     $scope.$on('$destroy', function () {
       socket.unsyncUpdates('message');
     });
 
-  });
+  }]);

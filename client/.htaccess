@@ -67,7 +67,7 @@
 Options -MultiViews
 
 # ------------------------------------------------------------------------------
-# | Custom error messages / pages                                              |
+# | Custom error msgs / pages                                              |
 # ------------------------------------------------------------------------------
 
 # You can customize what Apache returns to the client in case of an error (see

@@ -2,9 +2,9 @@
 <div class="container">
 <div class="col-md-12">
 
-	<div class="row panel panel-default" ng-repeat="message in messages">
+	<div class="row panel panel-default" ng-repeat="message in msgs">
 		<div class="panel-header">
-			<h4>{{ message.author }}</h4>
+			<h4>{{ message.author.name }}</h4>
 			<span class="">{{ message.postDate | date }}</span>
 		</div>
 		<div class="panel-body">

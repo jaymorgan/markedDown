@@ -1,6 +1,6 @@
 'use strict';
 
-describe('Service: messages', function () {
+describe('Service: msgs', function () {
 
   // load the service's module
   beforeEach(module('markedDownApp'));
